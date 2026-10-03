@@ -1,47 +1,73 @@
 %%=============================================================================
 %% CAPITULO 1 -- INTRODUCAO
-%%
-%% Na introducao, faca a apresentacao do trabalho. Ela devera ocupar uma ou,
-%% no maximo, duas paginas. De um panorama da tematica, exponha a questao
-%% problema que conduzira a pesquisa proposta, a hipotese e a justificativa.
-%%
-%% Titulos: nao utilize ponto apos a numeracao das secoes.
+%% Esqueleto provisorio (dissertacao dummy): texto a ser desenvolvido.
 %%=============================================================================
 
 \section{Introdução}
 
-Na primeira página da parte textual do trabalho de conclusão de curso, faça a
-apresentação de sua pesquisa. A introdução deverá ocupar uma ou, no máximo, duas
-páginas do seu trabalho. Nela, dê um panorama da temática, exponha a questão
-problema que conduzirá a pesquisa proposta, a hipótese e a justificativa.
+O Canal Educação, programa de mediação tecnológica da Secretaria de Estado da
+Educação do Piauí (SEDUC-PI), acumulou em mais de uma década de operação
+milhares de videoaulas que cobrem etapas e modalidades da educação básica nos
+224 municípios do estado. Dentro desse acervo, o conjunto de 760 videoaulas
+ativas do Preparatório ENEM, distribuído em quinze disciplinas, constitui um
+ativo digital público de escala considerável, cujo valor depende menos de sua
+existência do que da capacidade institucional de convertê-lo em uso pedagógico
+efetivo.
 
-Os capítulos (seções) e subcapítulos (subseções) são sequenciais. O título de
-cada seção primária (\textbf{1 INTRODUÇÃO}, \textbf{2 REFERENCIAL TEÓRICO} etc.)
-é grafado em letras maiúsculas e negritadas. Não utilize ponto após a numeração
-das seções. Deixe uma linha em branco entre as seções.
+O professor da rede pública que identifica a necessidade de trabalhar
+determinada habilidade da matriz de referência do Exame Nacional do Ensino
+Médio (ENEM) não dispõe de ferramenta que indique, de forma automática e
+contextualizada, quais aulas desse acervo são mais adequadas para esse fim. O
+diagnóstico avaliativo e o acervo de conteúdo foram construídos por trilhas
+institucionais distintas e ainda não possuem interfaces que os conectem no
+momento do planejamento, de modo que a tarefa de articular currículo, avaliação
+e acervo recai integralmente sobre o docente.
+
+Esta pesquisa desenvolve e avalia, sob o método da Design Science Research
+(DSR), um artefato de recomendação pedagógica que classifica as videoaulas do
+Canal Educação segundo as 120 habilidades da matriz de referência do ENEM. O
+artefato converte o conteúdo audiovisual em texto por transcrição automática,
+representa aulas e descritores por embeddings do modelo multilíngue BGE-M3 e
+ordena, para cada aula, as habilidades mais próximas pela similaridade de
+cosseno, sem depender de histórico de uso.
 
 \subsection{Objetivo geral}
 
-Enuncie, em um único parágrafo e com um verbo no infinitivo, o que a pesquisa
-pretende alcançar.
+Avaliar tecnicamente alternativas de classificação automatizada do acervo de
+videoaulas do Preparatório ENEM do Canal Educação segundo as habilidades da
+matriz de referência do ENEM, tomando como referência externa a atribuição
+oficial de habilidades a itens do exame publicada pelo Instituto Nacional de
+Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 
 \subsection{Objetivos específicos}
 
 \begin{itemize}
-  \item Objetivo específico 1;
-  \item Objetivo específico 2;
-  \item Objetivo específico 3.
+  \item Mapear e classificar as 760 videoaulas ativas do Preparatório ENEM por
+        habilidade da matriz de referência, caracterizando previamente acervo e
+        matriz como ativos digitais do Estado;
+  \item Construir o artefato de recomendação baseado em conteúdo, com
+        embeddings BGE-M3 e similaridade de cosseno, sem dependência de
+        histórico de uso;
+  \item Comparar, sobre os itens do ENEM com habilidade atribuída pelo INEP, o
+        método do artefato, um método lexical sem inteligência artificial
+        (TF-IDF) e um modelo generativo, quanto a qualidade, estabilidade e
+        viabilidade de execução.
 \end{itemize}
 
 \subsection{Problema}
 
-Formule a questão problema em forma de pergunta, de modo claro e delimitado.
-
-\subsection{Hipótese}
-
-Apresente a resposta provisória que a pesquisa pretende confirmar ou refutar.
+Em que medida alternativas de classificação automatizada, com e sem
+inteligência artificial, conseguem atribuir às videoaulas de um acervo público
+as habilidades da matriz de referência do ENEM com concordância suficiente, em
+relação à atribuição oficial do INEP, para apoiar o planejamento docente sem
+substituir a decisão pedagógica?
 
 \subsection{Justificativa}
 
-Explique a relevância acadêmica e social do tema e o que motivou a escolha do
-recorte adotado.
+Do ponto de vista da gestão pública, a classificação do acervo converte-se em
+insumo de governança do próprio ativo: ao expor as habilidades de alta
+recorrência no exame com baixa ou nenhuma videoaula disponível, orienta a
+priorização da produção de novos conteúdos pela SEDUC-PI. O recorte declara,
+ainda, o conflito de interesse do pesquisador, que exerce função de direção na
+organização que opera o Canal Educação, e adota como salvaguarda a natureza
+externa da referência de avaliação, produzida pelo INEP e anterior à pesquisa.

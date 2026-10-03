@@ -1,22 +1,56 @@
 %%=============================================================================
 %% CAPITULO 4 -- APRESENTACAO, ANALISE E DISCUSSAO DOS DADOS
+%% Esqueleto provisorio (dissertacao dummy): texto a ser desenvolvido.
 %%=============================================================================
 
 \section{Análise e discussão dos dados}
 
-Apresente os resultados alcançados ou esperados e faça uma análise comparativa
-entre os resultados esperados e os alcançados com a execução do projeto de
-pesquisa ou de intervenção.
+A execução do artefato classificou as 760 videoaulas ativas do acervo,
+distribuídas entre quinze disciplinas e cinco áreas de referência, sem registro
+de falha de processamento. A análise do comportamento da classificação revelou
+distribuição de escores unimodal e concentrada e margens reduzidas entre as
+primeiras posições do ordenamento: com margens dessa ordem, a habilidade que
+ocupa a primeira posição não representa escolha nitidamente destacada, mas o
+primeiro elemento de um conjunto de descritores quase equidistantes do conteúdo
+da aula.
 
-\subsection{Apresentação dos resultados}
+A Tabela~\ref{tab:concordancia} apresenta a concordância das alternativas com a
+atribuição oficial de habilidades do INEP sobre os 178 itens válidos da edição
+de 2023 do ENEM, medida na primeira posição do ordenamento e nas cinco
+primeiras posições, com trinta habilidades candidatas por área.
 
-Organize os resultados na mesma ordem em que os objetivos específicos foram
-enunciados na introdução. Use tabelas, quadros e gráficos sempre que isso tornar
-a leitura mais clara, lembrando que toda ilustração precisa ser citada no texto
-(ver Tabela~\ref{tab:exemplo} e Figura~\ref{fig:exemplo}).
+\begin{table}[htb]
+  \caption{Concordância com a atribuição oficial de habilidades do INEP (ENEM 2023, N = 178)}
+  \label{tab:concordancia}
+  \centering
+  \begin{tabular}{lrr}
+    \toprule
+    \textbf{Condição} & \textbf{Primeira posição (\%)} & \textbf{Cinco posições (\%)} \\
+    \midrule
+    Acaso (30 candidatas)                         &  3,3 & 16,7 \\
+    Lexical (TF-IDF), sem inteligência artificial & 11,8 & 32,6 \\
+    Embeddings BGE-M3 (método do artefato)        & 15,7 & 43,8 \\
+    Modelo generativo proprietário                & 41,0 & 78,1 \\
+    \bottomrule
+  \end{tabular}
+  \fonte{Elaborado pelo autor (2026), a partir dos resultados da pesquisa.}
+\end{table}
 
-\subsection{Discussão}
+Três leituras decorrem da tabela. Todas as condições superam o acaso com folga
+suficiente para que a medição não seja ruído. O artefato supera o método sem
+inteligência artificial, 15,7\% contra 11,8\% na primeira posição e 43,8\%
+contra 32,6\% em cinco posições, o que atende ao parâmetro de aceitação fixado
+a priori, com a ressalva de que, em Linguagens e Códigos, o TF-IDF supera os
+embeddings na primeira posição. E o artefato alcança menos da metade do
+desempenho da condição generativa, 15,7\% contra 41,0\%, o que mostra que o
+patamar observado não decorre de limite intrínseco da tarefa.
 
-Confronte os resultados com o referencial teórico construído no Capítulo~2.
-Indique convergências, divergências e possíveis explicações, sempre com o devido
-suporte bibliográfico.
+Para uma rede pública, portanto, a decisão não é qual método é melhor, e sim
+qual combinação de qualidade, custo e autonomia é aceitável. A condição
+generativa classifica melhor, mas transmite conteúdo educacional público a
+infraestrutura de terceiro e depende de versão mantida por fornecedor externo;
+as condições locais executam em estação de trabalho de prateleira, sem custo
+por requisição e com reprodutibilidade integral. A comparação estabelece ainda
+que o texto com que a matriz enuncia a habilidade é representação menos fiel do
+que o exame cobra do que o conjunto dos itens oficialmente atribuídos a essa
+habilidade.

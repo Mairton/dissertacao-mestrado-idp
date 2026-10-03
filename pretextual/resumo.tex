@@ -1,27 +1,30 @@
 %% RESUMO NA LINGUA VERNACULA (elemento obrigatorio -- NBR 6028)
-%%
-%% Regras:
-%%   - paragrafo unico, sem recuo, justificado;
-%%   - Times New Roman 12, espacamento simples;
-%%   - entre 150 e 500 palavras;
-%%   - verbo na voz ativa e na terceira pessoa do singular;
-%%   - as palavras-chave sao definidas em config/dados.tex.
-%%
-%% Um bom resumo informa: objetivo geral; principais conceitos e autores da
-%% fundamentacao teorica; etapas e acoes da execucao; populacao envolvida e
-%% periodo; principais resultados alcancados; conclusoes.
+%% Paragrafo unico, sem recuo, 150 a 500 palavras; palavras-chave em
+%% config/dados.tex. Versao provisoria (dissertacao dummy).
 
 \begin{resumo}
-Este espaço é reservado para apresentar o resumo do seu trabalho na língua
-vernácula. Ele deve conter entre 150 e 500 palavras, em Times New Roman
-tamanho 12, com espaçamento simples e alinhamento justificado. Um bom resumo
-deve informar o objetivo geral do trabalho, os principais conceitos e autores
-trabalhados na fundamentação teórica, as principais etapas e ações na execução
-da proposta, a população envolvida e o período no qual os dados foram obtidos.
-Apresente também os principais resultados alcançados e as conclusões a que se
-chegou. O resumo deve ser redigido em um único parágrafo, sem recuo de primeira
-linha, empregando o verbo na voz ativa e na terceira pessoa do singular. Evite
-símbolos, fórmulas, equações e diagramas que não sejam absolutamente
-necessários, bem como citações bibliográficas. Em caso de dúvidas, consulte a
-norma NBR 6028.
+Acervos educacionais audiovisuais mantidos por redes públicas de ensino
+constituem ativos digitais do Estado, cujo valor público depende menos de sua
+existência do que da capacidade institucional de convertê-los em uso pedagógico
+efetivo. Esta pesquisa desenvolve e avalia um artefato de recomendação
+pedagógica baseado em inteligência artificial que classifica as 760 videoaulas
+ativas do Preparatório ENEM do Canal Educação, programa da Secretaria de Estado
+da Educação do Piauí, segundo as 120 habilidades da matriz de referência do
+Exame Nacional do Ensino Médio, com o propósito de apoiar o planejamento docente
+sem substituir a decisão pedagógica. Adota-se a Design Science Research como
+método. O artefato converte o conteúdo audiovisual em texto por transcrição
+automática, representa aulas e descritores por embeddings do modelo multilíngue
+BGE-M3, empregado exclusivamente em inferência, e ordena, para cada aula, as
+habilidades mais próximas pela similaridade de cosseno, sem depender de
+histórico de uso. A avaliação técnica confronta o método do artefato, um método
+lexical sem inteligência artificial (TF-IDF) e um modelo generativo com a
+atribuição oficial de habilidades a itens do exame publicada pelo INEP. Sobre os
+178 itens da edição de 2023, o artefato supera o método lexical na primeira
+posição do ordenamento e em cinco posições, mas alcança menos da metade da
+concordância do modelo generativo. Os resultados indicam a viabilidade técnica
+da recomendação baseada em conteúdo em contexto de início frio e evidenciam
+limites que condicionam a interpretação das saídas. Do ponto de vista da gestão
+pública, a classificação do acervo converte-se em insumo de governança do
+próprio ativo, ao expor as lacunas de cobertura curricular que orientam a
+priorização da produção de novos conteúdos.
 \end{resumo}
