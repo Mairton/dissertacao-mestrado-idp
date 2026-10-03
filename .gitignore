@@ -36,3 +36,6 @@ Thumbs.db
 # Descomente a linha abaixo se NÃO quiser versionar o PDF compilado.
 # main.pdf
 *-SAVE-ERROR
+
+# --- Export do Wayfinder (ia-6.2), regravado a cada validacao ---------------
+wayfinder-export.json
